@@ -32,6 +32,8 @@ public class ProductDao {
     }
 
     public Product findById(long id){
+        System.out.println("its hits database");
+
         return (Product) redisTemplate.opsForHash().get(HASH_KEY, id);
     }
 
